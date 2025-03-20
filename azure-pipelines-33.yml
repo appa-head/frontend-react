@@ -1,0 +1,55 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  # Replace with your Azure Web App name
+  webAppName: 'reactjs-webapp'
+  # Replace with your Azure Resource Group name
+  resourceGroupName: 'reactjs-resource-group'
+  # Node.js version
+  nodeVersion: '16.x'
+
+steps:
+  # Install Node.js
+  - task: UseNode@2
+    inputs:
+      version: $(nodeVersion)
+
+  # Install dependencies
+  - script: |
+      npm install
+    displayName: 'Install Dependencies'
+
+  # Build the project
+  - script: |
+      npm run build
+    displayName: 'Build Project'
+
+  # Archive the build artifacts
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: 'dist' # Replace 'dist' with your build output folder
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/reactjs.zip'
+      replaceExistingArchive: true
+
+  # Publish the build artifacts
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)/reactjs.zip'
+      artifactName: 'drop'
+      publishLocation: 'Container'
+
+  # Deploy to Azure Web App
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: '<Your Azure Service Connection>'
+      appName: $(webAppName)
+      resourceGroupName: $(resourceGroupName)
+      package: '$(Build.ArtifactStagingDirectory)/reactjs.zip'
