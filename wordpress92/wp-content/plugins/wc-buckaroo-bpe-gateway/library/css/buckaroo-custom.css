@@ -1,0 +1,196 @@
+.payment_method_buckaroo_ideal fieldset {
+    background-color: white;
+}
+
+
+/* Hide Exodus Method */
+
+.wc_payment_method.payment_method_ {
+    display: none;
+}
+input[type="password"].error,
+input[type="text"].error {
+    border-color: red;
+}
+input[type="password"].validated,
+input[type="text"].validated {
+    border-color: green;
+}
+
+.capture-form {
+    background: white;
+    background-color: #e4e4e4;
+    /* width: fit-content; */
+    position: absolute;
+    margin: 0 auto;
+    right: 342px;
+    display: none;
+}
+
+.capture input {
+    width: 70px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.capture .capture_order_item_qty {
+    text-align: center !important;
+    width: 50px!important;
+}
+
+.woocommerce_order_items_wrapper table.woocommerce_order_items thead th {
+    text-align: left;
+    padding: 1em;
+    font-weight: 400;
+    color: #999;
+    background: #f8f8f8;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* .thumbs div::before {
+    font-family: WooCommerce;
+    speak: none;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    margin: 0;
+    text-indent: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    content: "";
+    color: #ccc;
+} */
+
+#woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody tr:first-child td {
+    border-top: 8px solid #f8f8f8;
+}
+
+table.woocommerce_order_items tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table.woocommerce_order_items {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+table.woocommerce_order_items tbody tr:first-child td {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.wc-order-capture-totals-items .wc-order-totals {
+    float: right;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.applepay-button-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#woocommerce_buckaroo_creditcard_AllowedProvider,
+#woocommerce_buckaroo_creditcard_show_in_checkout {
+    width: 400px;
+    margin: 0;
+    box-sizing: border-box;
+    height: 220px;
+    line-height: 32px;
+    vertical-align: top;
+}
+
+.buckaroo-idin.buckaroo-idin-passed p,
+.buckaroo-idin-cart p {
+    margin: 0;
+}
+
+#buckaroo_idin .buckaroo_idin_logo,
+#buckaroo_idin_cart .buckaroo_idin_logo {
+    width: 3em;
+    float: left;
+}
+
+.buckaroo-idin .buckaroo_idin_prompt {
+    padding-left: 3.5em;
+}
+
+.buckaroo-idin-cart .buckaroo_idin_prompt {
+    padding-top: 0.5em;
+    padding-left: 3.5em;
+}
+
+#buckaroo-report table {
+    table-layout: auto;
+    width: 100%;
+}
+.buckaroo-payment-list {
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+}
+.buckaroo-payment-list li {
+    flex: 0 0 auto;
+    width: 33.333%;
+    display: flex;
+    align-items: center;
+}
+.buckaroo-payment-list-icon {
+    max-height: 35px;
+    width: auto;
+    margin-right: 10px;
+}
+.buckaroo-payment-status {
+    margin: 0 3px;
+}
+.buckaroo-payment-enabled-live {
+    color: #198754;
+}
+.buckaroo-payment-enabled-test {
+    color: #ffc107;
+}
+.buckaroo-payment-disabled {
+    color: #dc3545;
+}
+@media (max-width: 1024px) {
+    .buckaroo-payment-list {
+        height: 700px;
+    }
+    .buckaroo-payment-list li {
+        width: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .buckaroo-payment-list li {
+        width: 1000%;
+    }
+}
+label[for^="payment_method_buckaroo_"] img {
+    max-height: 25px;
+    max-width: auto;
+}
+label[for^="payment_method_buckaroo_creditcard"] img {
+    max-height: 72px;
+}
+.buckaroo-paypal-express {
+    margin: 10px 0;
+    max-width: 200px;
+}

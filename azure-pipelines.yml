@@ -1,34 +1,55 @@
 trigger:
-- main
+  branches:
+    include:
+      - main
 
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  # Replace with your Azure Web App name
+  webAppName: 'portfolio-webapp'
+  # Replace with your Azure Resource Group name
+  resourceGroupName: 'portfolio-resource-group'
+  # Node.js version
+  nodeVersion: '16.x'
+
 steps:
-- task: UsePhpVersion@0
-  inputs:
-    versionSpec: '7.x'
-    addToPath: true
+  # Install Node.js
+  - task: UseNode@2
+    inputs:
+      version: $(nodeVersion)
 
-- script: |
-    composer install --no-dev
-  displayName: 'Install dependencies'
+  # Install dependencies
+  - script: |
+      npm install
+    displayName: 'Install Dependencies'
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: 'src'
-    Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  # Build the project
+  - script: |
+      npm run build
+    displayName: 'Build Project'
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+  # Archive the build artifacts
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: 'dist' # Replace 'dist' with your build output folder
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/portfolio.zip'
+      replaceExistingArchive: true
 
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'Free Trial(98c52503-d054-4ae0-90a9-92746ad3a6d6)'
-    appName: 'rookwolk'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    deploymentMethod: 'zipDeploy'
+  # Publish the build artifacts
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)/portfolio.zip'
+      artifactName: 'drop'
+      publishLocation: 'Container'
+
+  # Deploy to Azure Web App
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: '<Your Azure Service Connection>'
+      appName: $(webAppName)
+      resourceGroupName: $(resourceGroupName)
+      package: '$(Build.ArtifactStagingDirectory)/portfolio.zip'

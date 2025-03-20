@@ -1,0 +1,981 @@
+/*
+Theme Name: Porto-Novo
+Theme URI: https://demos.orionorigin.com/porto-novo
+Author: Orion Origin
+Author URI: https://www.orionorigin.com/
+Description: Porto-Novo is a WordPress theme mainly designed for ecommerce, blog, and portfolio websites. It gives you a wide variety of options from which you can modify the face of your website to suit your target audience.
+Version: 2.3.2
+License:
+License URI:
+Text Domain: porto-novo
+Tags: two-columns , left-sidebar, translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+components is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Accessibility
+# Alignments
+# Clearings
+# Typography
+# Forms
+# Buttons
+# Formatting
+# Lists
+# Tables
+# Navigation
+# Links
+# Layout
+	## Posts
+	## Pages
+# Comments
+# Widgets
+# Infinite scroll
+# Media
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+  font-family: 'Droid Serif', serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+}
+figure.wp-caption.alignleft, img.alignleft {
+    margin: 5px 20px 5px 0;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+}
+figure.wp-caption.alignright, img.alignright {
+    margin: 5px 0 5px 20px;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+ /* font-family: Montserrat;*/
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 11px !important;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+  white-space: normal;
+}
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  background: #f6f6f6;
+  border: 0;
+  padding: 0 20px;
+  border-radius: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+  outline: none;
+}
+
+
+textarea {
+  padding-left: 3px;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: #2d3a4b;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 25px;
+  border: 0;
+  transition: background .3s;
+  font-size: 13px;
+  outline: 0;
+}
+/*button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background: #000;
+}*/
+button:active,
+input[type="button"]:active,
+
+input[type="reset"]:active,
+
+input[type="submit"]:active
+{
+  position: relative;
+  top: 1px;
+}
+
+/*--------------------------------------------------------------
+# Formattings
+--------------------------------------------------------------*/
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li:before {
+  float: left;
+
+}
+
+ol {
+  list-style: decimal;
+  padding: 0;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: block;
+  }
+}
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a {
+  color: #666666;
+  transition: color .3s;
+}
+
+a:hover, a:focus, a:active {
+  color: #1f1f1f;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+/*--------------------------------------------------------------
+## Posts
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+## Pages
+--------------------------------------------------------------*/
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-caption {
+  display: block;
+}
+
+/* ***** Page Meta Layout ***** */
+
+#primary.right-sidebar #secondary {
+  float: right;
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+/*===================================================*/
+/*template grid or listing without sidebar*/
+#primary.no-sidebar #main {
+  width: 100%;
+}
+/*template grid or listing with sidebar*/
+#primary.with-sidebar #main {
+  width: 74%;
+  float: left;
+}
+#primary.with-sidebar #secondary {
+  width: 26%;
+  float: left;
+}
+/******************General for grids**********************/
+/*template grid with sidebar styles*/
+#primary.grid-2-right.with-sidebar #secondary,
+#primary.grid-3-right.with-sidebar #secondary,
+#primary.list-1-right #secondary,
+#primary.list-2-right #secondary {
+  float: right;
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+#primary.grid-2-left.with-sidebar #secondary,
+#primary.grid-3-left.with-sidebar #secondary,
+#primary.list-1-left #secondary,
+#primary.list-2-left #secondary  {
+  float: left;
+  padding-right: 30px;
+  padding-left: 0;
+}
+/******************End Grids************************/
+/******************End for lists**********************/
+
+/*====================Grid 2================*/
+#primary.grid-2-left article.blog-archive-post,
+#primary.grid-2-right article.blog-archive-post {
+  width: calc((100% - 30px)/2);
+}
+/*====================Grid 3================*/
+#primary.grid-3-left article.blog-archive-post,
+#primary.grid-3-right article.blog-archive-post {
+  width: calc((100% - 61px)/3);
+}
+/*====================lists================*/
+
+div.list-layout article.blog-archive-post {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#primary.with-sidebar div.list-2c article.blog-archive-post,
+#primary.left-sidebar div.list-2c article.blog-archive-post,
+#primary.right-sidebar div.list-2c article.blog-archive-post {
+  border: 1px solid #e5ecef;
+}
+
+#primary.list-1-left article.blog-archive-post,
+#primary.list-1-right article.blog-archive-post {
+  width: 100%;
+}
+
+#primary.list-2-left article.blog-archive-post,
+#primary.list-2-right article.blog-archive-post {
+  width: 100%;
+  border: 1px solid #e5ecef;
+}
+
+#primary.list-2-left article.blog-archive-post div.excerpt-wrap,
+#primary.list-2-right article.blog-archive-post div.excerpt-wrap,
+#primary.with-sidebar div.list-2c article.blog-archive-post div.excerpt-wrap,
+#primary.left-sidebar div.list-2c article.blog-archive-post div.excerpt-wrap,
+#primary.right-sidebar div.list-2c article.blog-archive-post div.excerpt-wrap {
+  padding-top: 30px;
+}
+
+#primary.list-2-left article.blog-archive-post h2,
+#primary.list-2-right article.blog-archive-post h2,
+#primary.with-sidebar div.list-2c article.blog-archive-post h2,
+#primary.left-sidebar div.list-2c article.blog-archive-post h2,
+#primary.right-sidebar div.list-2c article.blog-archive-post h2 {
+  margin-top: 10px;
+}
+
+#primary.list-2-left #main .blog-archive-post-content,
+#primary.list-2-right #main .blog-archive-post-content {
+  width: 100%;
+}
+#primary.list-2-left #main .blog-archive-post .post-thumbnail,
+#primary.list-2-right #main .blog-archive-post .post-thumbnail,
+#primary.list-2-left #main .blog-archive-post .link-container,
+#primary.list-2-right #main .blog-archive-post .link-container,
+#primary.list-2-left #main .blog-archive-post .images-slider-container,
+#primary.list-2-right #main .blog-archive-post .images-slider-container,
+#primary.with-sidebar div.list-2c article.blog-archive-post .post-thumbnail,
+#primary.left-sidebar div.list-2c article.blog-archive-post .post-thumbnail,
+#primary.right-sidebar div.list-2c article.blog-archive-post .post-thumbnail,
+#primary.with-sidebar div.list-2c article.blog-archive-post .link-container,
+#primary.left-sidebar div.list-2c article.blog-archive-post .link-container,
+#primary.right-sidebar div.list-2c article.blog-archive-post .link-container,
+#primary.with-sidebar div.list-2c article.blog-archive-post .images-slider-container,
+#primary.left-sidebar div.list-2c article.blog-archive-post .images-slider-container,
+#primary.right-sidebar div.list-2c article.blog-archive-post .images-slider-container {
+  border: none;
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  padding-bottom: 500em;
+  margin-bottom: -500em;
+}
+
+#primary.list-2-left #main .blog-archive-post .link-container a,
+#primary.list-2-right #main .blog-archive-post .link-container a,
+#primary.list-2-left #main .blog-archive-post .link-container,
+#primary.list-2-right #main .blog-archive-post .link-container,
+#primary.with-sidebar div.list-2c article.blog-archive-post .link-container a,
+#primary.left-sidebar div.list-2c article.blog-archive-post .link-container a,
+#primary.right-sidebar div.list-2c article.blog-archive-post .link-container a {
+  min-height: 300px;
+}
+
+#primary.list-2-left #main .blog-archive-post div.link-container iframe,
+#primary.list-2-right #main .blog-archive-post div.link-container iframe,
+#primary.with-sidebar div.list-2c article.blog-archive-post div.link-container iframe,
+#primary.left-sidebar div.list-2c article.blog-archive-post div.link-container iframe,
+#primary.right-sidebar div.list-2c article.blog-archive-post div.link-container iframe {
+  height: 300px;
+}
+
+#primary.list-2-left #main .blog-archive-post blockquote,
+#primary.list-2-right #main .blog-archive-post blockquote,
+#primary.with-sidebar div.list-2c article.blog-archive-post blockquote,
+#primary.left-sidebar div.list-2c article.blog-archive-post blockquote,
+#primary.right-sidebar div.list-2c article.blog-archive-post blockquote {
+  width: 50%;
+  float: left;
+  min-height: 300px;
+}
+
+#primary.list-2-left #main .blog-archive-post .blog-archive-post-content,
+#primary.list-2-right #main .blog-archive-post .blog-archive-post-content,
+#primary.with-sidebar div.list-2c article.blog-archive-post .blog-archive-post-content,
+#primary.left-sidebar div.list-2c article.blog-archive-post .blog-archive-post-content,
+#primary.right-sidebar div.list-2c article.blog-archive-post .blog-archive-post-content {
+  border: none;
+  width: 50%;
+  float: left;
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 500em;
+  margin-bottom: -500em;
+}
+
+#primary.list-2-left #main .blog-archive-post.post_format-post-format-link,
+#primary.list-2-right #main .blog-archive-post.post_format-post-format-link {
+  background-color: #eee;
+}
+.posts-grid .blog-archive-post.sticky-post
+{
+    background: #fffef0;
+}
+/*=====template lists=====*/
+
+@media all and (max-width: 700px) {
+  #primary #sidebar,
+  #primary #main,
+  #primary #main .blog-archive-post,
+  #primary #main .blog-archive-post .post-thumbnail img,
+  #primary #main .blog-archive-post .blog-archive-post-content {
+    width: 100%!important;
+  }
+}

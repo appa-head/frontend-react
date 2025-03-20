@@ -1,0 +1,129 @@
+button,
+a.button,
+.wp-block-button__link,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 2px solid $color__primary;
+	box-shadow: none;
+	background: $color__primary;
+	color: #fff;
+	padding: 13px 24px;
+	cursor: pointer;
+	display: inline-block;
+	transition: all 0.3s;
+	border-radius: 0;
+	height: auto;
+	border-radius: 0;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@include font-size(14);
+
+	&:hover {
+		border-color: $color__hover;
+
+		&:not(.has-background) {
+			background-color: $color__hover;
+		}
+	}
+
+	&:active,
+	&:focus {
+		color: #fff;
+	}
+}
+a.wc-backward {
+	color: #fff;
+}
+.is-style-outline .wp-block-button__link:not(.has-text-color),
+.wp-block-button__link:not(.has-text-color).is-style-outline {
+	color: $color__primary;
+	border: 2px solid $color__primary;
+}
+.wp-block-button {
+	margin-bottom: 20px;
+
+	&.is-style-outline {
+		.wp-block-button__link {
+			&:not(.has-background) {
+				background-color: transparent;
+				background-image: none;
+			}
+		}
+	}
+
+	&[style*="text-transform"] {
+		.wp-block-button__link {
+			text-transform: inherit;
+		}
+	}
+
+	&[style*="letter-spacing"] {
+		.wp-block-button__link {
+			letter-spacing: inherit;
+		}
+	}
+
+	&[style*="font-weight"] {
+		.wp-block-button__link {
+			font-weight: inherit;
+		}
+	}
+
+	&[style*="font-style"] {
+		.wp-block-button__link {
+			font-style: inherit;
+		}
+	}
+}
+.wp-block-button.is-style-squared, 
+.wp-block-button__link.wp-block-button.is-style-squared {
+	a {
+		border-radius: 0;
+	}
+}
+
+#coupon_code {
+	& + .button {
+		border-top-left-radius: 0 !important;
+		border-bottom-left-radius: 0 !important;
+	}
+}
+
+.checkout_coupon.woocommerce-form-coupon {
+	.button[name="apply_coupon"] {
+		border-top-left-radius: 0 !important;
+		border-bottom-left-radius: 0 !important;
+	}
+}
+
+// Add To Cart Button
+ul.products {
+	li.product {
+		.button {
+			&.loading:after {
+				font-family: WooCommerce;
+				content: "";
+				-webkit-animation: spin 2s linear infinite;
+				animation: spin 2s linear infinite;
+				margin-left: 0.5em;
+				display: inline-block;
+				width: auto;
+				height: auto;
+			}
+			&.loading {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+			&.added:after {
+				font-family: WooCommerce;
+				content: "";
+				margin-left: 0.5em;
+				display: inline-block;
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+}

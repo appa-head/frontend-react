@@ -1,0 +1,400 @@
+# Translation of Plugins - Buckaroo Woocommerce Payments Plugin - Stable (latest release) in Dutch
+# This file is distributed under the same license as the Plugins - Buckaroo Woocommerce Payments Plugin - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-05-29 16:46:22+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"Language: nl\n"
+"Project-Id-Version: Plugins - Buckaroo Woocommerce Payments Plugin - Stable (latest release)\n"
+
+#: library/common.php:19
+msgid "Refunded %1$s - Refund transaction ID: %2$s"
+msgstr "Terugbetaald %1$s - Terugbetaling transactie ID: %2$s"
+
+#: templates/gateways/billink.php:57 templates/gateways/billink.php:81
+msgid "Accept terms of use"
+msgstr "Aanvaard de gebruiksvoorwaarden"
+
+#: gateway-buckaroo-ideal.php:47
+msgid "<strong>iDEAL bank </strong> is a required field."
+msgstr "<strong>iDEAL bank </strong> is een verplicht veld."
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:359
+msgid "Add shipping"
+msgstr "Voeg verzendkosten toe"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:453
+#: includes/admin/meta-boxes/views/html-order-capture.php:510
+msgid "Add"
+msgstr "Toevoegen"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:407
+msgid "Payment gateway"
+msgstr "Betaalmethode"
+
+#: includes/class-wc-ajax.php:241
+msgid "Sorry, your session has expired."
+msgstr "Sorry, je sessie is verlopen."
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:435
+msgid "Quantity"
+msgstr "Aantal"
+
+#: templates/gateways/creditcard.php:113 templates/gateways/creditcard.php:121
+msgid "Expiration Year:"
+msgstr "Vervaljaar:"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:424
+msgid "Add products"
+msgstr "Toevoegen producten"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:133
+#: includes/admin/meta-boxes/views/html-order-capture.php:318
+#: includes/admin/meta-boxes/views/html-order-item.php:118
+#: includes/admin/meta-boxes/views/html-order-item.php:160
+msgid "Total"
+msgstr "Totaal"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:361
+#: includes/admin/meta-boxes/views/html-order-capture.php:467
+msgid "Add tax"
+msgstr "Belasting toevoegen"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:358
+msgid "Add fee"
+msgstr "Voeg kosten toe"
+
+#: gateway-buckaroo-creditcard.php:389
+msgid "Credit card method"
+msgstr "Creditcard"
+
+#: templates/gateways/creditcard.php:43
+msgid "Select your credit card:"
+msgstr "Kies je creditcard:"
+
+#. translators: %s: discount amount
+#: includes/admin/meta-boxes/views/html-order-item.php:101
+msgid "%s discount"
+msgstr "%s: korting"
+
+#: templates/gateways/creditcard.php:78 templates/gateways/creditcard.php:86
+msgid "Card Number:"
+msgstr "Kaartnummer:"
+
+#: templates/gateways/creditcard.php:95 templates/gateways/creditcard.php:104
+msgid "Expiration Month:"
+msgstr "Vervalmaand:"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:267
+msgid "Discount:"
+msgstr "Korting:"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:357
+msgid "Add product(s)"
+msgstr "Voeg product (en) toe"
+
+#: includes/class-wc-ajax.php:188
+msgid "Coupon has been removed."
+msgstr "Kortingscode is verwijderd."
+
+#: includes/class-wc-ajax.php:2057
+msgid "Dismiss this notice."
+msgstr "Verberg deze melding."
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:503
+msgid "Optional"
+msgstr "Optioneel"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:279
+msgid "Shipping:"
+msgstr "Verzenden:"
+
+#: templates/gateways/creditcard.php:61 templates/gateways/creditcard.php:69
+msgid "Cardholder Name:"
+msgstr "Naam kaarthouder"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:367
+#: includes/admin/meta-boxes/views/html-order-capture.php:411
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: includes/class-wc-ajax.php:241
+msgid "Return to shop"
+msgstr "Terug naar winkel"
+
+#: includes/class-wc-ajax.php:185
+msgid "Sorry there was a problem removing this coupon."
+msgstr "Helaas, er was een probleem met het verwijderen van deze kortingscode."
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:368
+msgid "Save"
+msgstr "Opslaan"
+
+#: includes/admin/meta-boxes/views/html-order-capture.php:434
+msgid "Product"
+msgstr "Product"
+
+#: templates/gateways/afterpaynew.php:30
+msgid "Identification Number"
+msgstr "Identificatienummer"
+
+#: templates/gateways/partial_afterpay_tos.php:53
+#: templates/gateways/partial_afterpay_tos.php:57
+msgid "Accept Afterpay conditions:"
+msgstr "AfterPay voorwaarden accepteren:"
+
+#: gateway-buckaroo-giftcard.php:86
+msgid "Giftcards must be comma separated"
+msgstr "Giftcards moeten gescheiden zijn met een komma"
+
+#: gateway-buckaroo-giftcard.php:84
+msgid "List of authorized giftcards"
+msgstr "Lijst van goedgekeurde giftcards"
+
+#: templates/gateways/ideal.php:22 templates/idin/checkout.php:37
+msgid "Select your bank"
+msgstr "Kies je bank"
+
+#: gateway-buckaroo-payconiq.php:69
+msgid "Payment cancelled. Please try again or choose another payment method."
+msgstr "Betaling afgebroken. Probeer het nogmaals of kies een andere betaalmethode."
+
+#: gateway-buckaroo-payconiq.php:104 index.php:297
+msgid "Checkout is not available whilst your cart is empty."
+msgstr "Afrekenen is niet mogelijk als je winkelmand leeg is."
+
+#: templates/payconiq/qrcode.php:319
+msgid "Confirm payment with your PIN or fingerprint. "
+msgstr "Bevestigen met je PIN of vingerafdruk."
+
+#: gateway-buckaroo.php:411
+msgid "Select Certificate"
+msgstr "Kies certificaat"
+
+#: gateway-buckaroo-mastersettings.php:68
+msgid "Fingerprint"
+msgstr "Vingerafdruk"
+
+#: templates/gateways/partial_birth_field.php:21
+msgid "Birthdate (format DD-MM-YYYY):"
+msgstr "Geboortedatum (formaat DD-MM-YYYY)"
+
+#: library/common.php:239 library/common.php:262 library/common.php:403
+msgid "We are sorry to inform you that the request to pay afterwards with AfterPay is not possible at this time. This can be due to various (temporary) reasons. For questions about your rejection you can contact the customer service of AfterPay. Or you can visit the website of AfterPay and check the 'Frequently asked questions' through this <a href=\"https://www.afterpay.nl/nl/consumenten/vraag-en-antwoord\" target=\"_blank\">link</a>. We advise you to choose another payment method to complete your order."
+msgstr "We are sorry to inform you that the request to pay afterwards with AfterPay is not possible at this time. This can be due to various (temporary) reasons. For questions about your rejection you can contact the customer service of AfterPay. Or you can visit the website of AfterPay and check the 'Frequently asked questions' through this <a href=\"https://www.afterpay.nl/nl/consumenten/vraag-en-antwoord\" target=\"_blank\">link</a>. We advise you to choose another payment method to complete your order."
+
+#: templates/gateways/partial_gender_field.php:46
+msgid "Female"
+msgstr "Vrouw"
+
+#: templates/gateways/partial_gender_field.php:35
+msgid "Male"
+msgstr "Man"
+
+#: gateway-buckaroo-mastersettings.php:107
+msgid "Buckaroo payment engine culture"
+msgstr "Buckaroo Payment Engine cultuur"
+
+#: library/common.php:41
+msgid "Refund failed: "
+msgstr "Refund mislukt:"
+
+#: library/common.php:45
+msgid "Refund failed for transaction ID: %s"
+msgstr "Refund mislukt voor transactie ID: %s"
+
+#: library/common.php:235 library/common.php:393
+msgid "Payment cancelled by customer."
+msgstr "Betaling geannuleerd door de klant."
+
+#: library/common.php:247 library/common.php:270
+msgid "Payment unsuccessful. Please try again or choose another payment method."
+msgstr "Betaling mislukt. Probeer het alstublieft opnieuw of kies een andere betaalmethode."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "http://www.buckaroo.nl"
+msgstr "http://www.buckaroo.nl"
+
+#: gateway-buckaroo-mastersettings.php:59
+msgid "Secret key"
+msgstr "Secret key"
+
+#: gateway-buckaroo.php:306
+msgid "Transaction mode"
+msgstr "Transactie modus"
+
+#: gateway-buckaroo.php:308
+msgid "Transaction mode used for processing orders"
+msgstr "Transactie modus gebruikt om bestellingen te verwerken"
+
+#: gateway-buckaroo-mastersettings.php:105
+msgid "Language"
+msgstr "Taal"
+
+#: gateway-buckaroo.php:324
+msgid "This controls the description which the user sees during checkout."
+msgstr "Zet hier de beschrijving die de klant ziet tijdens het afrekenen."
+
+#: gateway-buckaroo-mastersettings.php:130
+#: gateway-buckaroo-mastersettings.php:132
+msgid "Transaction description"
+msgstr "Beschrijving van transactie"
+
+#: gateway-buckaroo.php:322 templates/Buckaroo_Report_Page.php:109
+msgid "Description"
+msgstr "Beschrijving"
+
+#: gateway-buckaroo-transfer.php:126
+msgid "Number of days to the date that the order should be payed."
+msgstr "Aantal dagen voordat de order betaald moet zijn."
+
+#: gateway-buckaroo-transfer.php:131
+msgid "Buckaroo sends an email to the customer with the payment procedures."
+msgstr "Buckaroo stuurt een e-mail naar de klant met de betaalstappen."
+
+#: gateway-buckaroo-transfer.php:135
+msgid "Show payment procedures"
+msgstr "Laat de betaalstappen zien"
+
+#: gateway-buckaroo.php:331 library/api/paymentmethods/in3/in3.php:121
+#: library/Buckaroo_Order_Fee.php:101
+msgid "Payment fee"
+msgstr "Betaaltoeslag"
+
+#: gateway-buckaroo.php:299
+msgid "Enable/Disable"
+msgstr "Zet aan/uit"
+
+#: gateway-buckaroo-transfer.php:137
+msgid "Show payment procedures on the thank you page after payment confirmation."
+msgstr "Laat de betaalstappen zien op de Bedankt pagina nadat de betaling is bevestigd."
+
+#: gateway-buckaroo.php:480
+msgid "Please provide valid payment fee"
+msgstr "Geef een geldige betaaltoeslag op"
+
+#: gateway-buckaroo-sepadirectdebit.php:62
+#: gateway-buckaroo-sepadirectdebit.php:82
+msgid "Wrong IBAN number"
+msgstr "Verkeerd IBAN nummer"
+
+#: templates/gateways/sepadirectdebit.php:25
+msgid "Bank account holder:"
+msgstr "Rekeninghouder:"
+
+#: gateway-buckaroo-payperemail.php:161
+msgid "Due date (in days)"
+msgstr "Vervaldatum (in dagen)"
+
+#: gateway-buckaroo-transfer.php:124
+msgid "Number of days till order expire"
+msgstr "Aantal dagen totdat de order verloopt"
+
+#: gateway-buckaroo-transfer.php:129
+msgid "Send email"
+msgstr "Verstuur e-mail"
+
+#: templates/gateways/afterpay.php:60 templates/gateways/sepadirectdebit.php:39
+msgid "IBAN:"
+msgstr "IBAN:"
+
+#: templates/gateways/partial_afterpay_b2b.php:21
+msgid "Checkout for company"
+msgstr "Betalen als bedrijf"
+
+#: templates/gateways/billink.php:21
+#: templates/gateways/partial_afterpay_b2b.php:31
+msgid "Fill required fields if bill in on the company:"
+msgstr "Vul verplichte velden in als u bestelt als bedrijf:"
+
+#: templates/gateways/billink.php:25
+#: templates/gateways/partial_afterpay_b2b.php:35
+msgid "COC (KvK) number:"
+msgstr "KvK nummer:"
+
+#: templates/gateways/partial_afterpay_b2b.php:48
+msgid "Name of the organization:"
+msgstr "Naam van het bedrijf:"
+
+#: gateway-buckaroo-afterpay.php:430
+msgid "Select afterpay service"
+msgstr "Kies AfterPay service"
+
+#: gateway-buckaroo-afterpay.php:432
+msgid "Please select the service"
+msgstr "Kies de gewenste AfterPay service"
+
+#: gateway-buckaroo-afterpay.php:437
+msgid "Enable B2B option for AfterPay"
+msgstr "Zet B2B aan voor AfterPay"
+
+#: gateway-buckaroo-afterpay.php:439
+msgid "Enables or disables possibility to pay using company credentials"
+msgstr "Laat klanten de mogelijkheid zien om met bedrijfsinformatie te betalen. Dit is een apart abonnement."
+
+#: gateway-buckaroo-afterpay.php:444
+msgid "Default product Vat type"
+msgstr "Standaard BTW type voor producten"
+
+#: gateway-buckaroo-afterpay.php:446
+msgid "Please select default vat type for your products"
+msgstr "Kies standaard BTW type voor uw producten"
+
+#: gateway-buckaroo-giropay.php:44
+msgid "Please provide correct BIC"
+msgstr "Geef alstublieft een correcte BIC op"
+
+#: templates/gateways/giropay.php:21 templates/gateways/sepadirectdebit.php:54
+msgid "BIC:"
+msgstr "BIC:"
+
+#: gateway-buckaroo-sepadirectdebit.php:58
+msgid "Please fill in all required fields"
+msgstr "Vul alstublieft alle verplichte velden in"
+
+#: templates/gateways/payperemail.php:30
+msgid "First Name:"
+msgstr "Voornaam:"
+
+#: templates/gateways/payperemail.php:58
+msgid "Email:"
+msgstr "E-mail:"
+
+#: gateway-buckaroo-afterpay.php:64 gateway-buckaroo-afterpaynew.php:69
+#: gateway-buckaroo-creditcard.php:156 gateway-buckaroo.php:706
+msgid "Refund failed: Order not in ready state, Buckaroo transaction ID do not exists."
+msgstr "Refund mislukt: order is nog niet geslaagd. Buckaroo transactie ID bestaat niet."
+
+#: gateway-buckaroo-afterpay.php:272 gateway-buckaroo-afterpaynew.php:318
+#: gateway-buckaroo-in3.php:110
+msgid "Please enter correct birthdate date"
+msgstr "Vul alstublieft een juiste geboortedatum in"
+
+#: gateway-buckaroo-afterpay.php:267 gateway-buckaroo-afterpaynew.php:325
+msgid "Please accept licence agreements"
+msgstr "Accepteer alstublieft de license agreements"
+
+#: gateway-buckaroo-afterpay.php:281
+msgid "Company registration number is required (KvK)"
+msgstr "Kamer van Koophandel nummer is verplicht (KvK)"
+
+#: gateway-buckaroo-afterpay.php:284
+msgid "Company name is required"
+msgstr "Bedrijfsnaam is verplicht"
+
+#: gateway-buckaroo-afterpay.php:294
+msgid "IBAN is required"
+msgstr "IBAN is verplicht"
+
+#: templates/gateways/global.php:19
+msgid "TEST MODE"
+msgstr "TEST MODUS"
+
+#: templates/gateways/partial_gender_field.php:21
+msgid "Gender:"
+msgstr "Geslacht:"
