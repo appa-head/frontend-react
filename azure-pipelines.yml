@@ -1,0 +1,34 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UsePhpVersion@0
+  inputs:
+    versionSpec: '7.x'
+    addToPath: true
+
+- script: |
+    composer install --no-dev
+  displayName: 'Install dependencies'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'src'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Free Trial(98c52503-d054-4ae0-90a9-92746ad3a6d6)'
+    appName: 'rookwolk'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'zipDeploy'
