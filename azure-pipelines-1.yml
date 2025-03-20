@@ -27,8 +27,16 @@ stages:
     displayName: 'Test Job'
     steps:
     - script: |
-        echo "Running unit tests..."
-      displayName: 'Run unit tests'
+        echo "Starting OWASP ZAP scan..."
+        docker run --rm -v $(pwd):/zap/wrk:rw owasp/zap2docker-stable zap-full-scan.py -t <TARGET_URL> -J zap_report.json
+        echo "OWASP ZAP scan completed."
+      displayName: 'Run OWASP ZAP Scan'
+    
+    - script: |
+        echo "Uploading scan results..."
+        curl -X POST -H "Content-Type: application/json" --data @zap_report.json <FEED_API_ENDPOINT>
+        echo "Scan results uploaded."
+      displayName: 'Upload ZAP Scan Results'
 
 
 - stage: DeployToStaging
